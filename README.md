@@ -1,0 +1,3 @@
+A small class for handling keyboard animations
+
+See KeyboardAlignmentHandler/KeyboardAlignmentHandlerExample/KeyboardAlignmentHandler.swift
