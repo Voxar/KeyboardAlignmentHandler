@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyboardAlignmentHandlerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xab-bV-m56">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap me" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEd-5D-7VN">
+                                        <rect key="frame" x="38" y="318" width="300" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="fLf-eG-UuV"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XEd-5D-7VN" firstAttribute="centerY" secondItem="Xab-bV-m56" secondAttribute="centerY" id="7Mg-je-TEi"/>
+                                    <constraint firstItem="XEd-5D-7VN" firstAttribute="centerX" secondItem="Xab-bV-m56" secondAttribute="centerX" id="CNL-Ww-WRM"/>
+                                    <constraint firstItem="XEd-5D-7VN" firstAttribute="width" secondItem="Xab-bV-m56" secondAttribute="width" multiplier="0.8" id="EcV-xG-4sC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xab-bV-m56" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EP5-PM-lkC"/>
+                            <constraint firstItem="Xab-bV-m56" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="je4-j0-bE7"/>
+                            <constraint firstItem="Xab-bV-m56" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jjY-5y-gsU"/>
+                            <constraint firstItem="Xab-bV-m56" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vyv-wi-dCi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="UQR-bd-o6T" customClass="KeyboardAlignmentHandler" customModule="KeyboardAlignmentHandlerExample" customModuleProvider="target">
+                    <connections>
+                        <outlet property="view" destination="Xab-bV-m56" id="MIb-JS-s27"/>
+                        <outletCollection property="constraints" destination="vyv-wi-dCi" collectionClass="NSMutableArray" id="bJs-vl-jW5"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
